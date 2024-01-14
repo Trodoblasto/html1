@@ -22,10 +22,13 @@
 .caja{
     width: inherit;
     min-height: 40px;
-    padding:10px;
-    border: 2px solid #b18181;
+    padding:2px;
+    border: 2px solid #81b183;
     border-radius: 14px;
-    background-color: #fdf1f1;
-    color:#b16464
+    background-color: #e4f0e8;
+    color:#4f9e60;
+    font-size: 22px;
+    padding-top:4px;
+    margin-top: 16px;
 
 }
