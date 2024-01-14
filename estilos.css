@@ -18,8 +18,15 @@
     text-align: center;
     padding: 6px;
 }
+.container-caja{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
 .caja{
-    width: inherit;
+    width: 320px;
     min-height: 40px;
     padding:2px;
     border: 2px solid #b16464;
