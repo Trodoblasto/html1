@@ -1,65 +1,65 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="estilos.css">
-    <script src="nacho.js"></script>
-</head>
-<body>
-    <div class="card">
-        <div class= "card_head"></div>
-        <diV class="card_body">
-            <h2> PRIMER PROJECTO CON GIT Y GITHUB</h2>
-            <div class="container-caja">
-                <div class="caja">
-                    En un lugar de la Mancha de cuyo nombre no quiero acordarme
+<html>
+    <head>
+        <title>Malaquita</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="estilos.css">
+        <script src="nacho.js"></script>
+       
+    
+    </head>
+    <body>
+        <div class="malaquitaContainer">
+            <svg width="600" height="600" id ="malaquitaSVG" xmlns="http://www.w3.org/2000/svg">
+            </svg>
+            <div class="controlsContainer">
+
+                <div class=" tranlateContainer">
+                        <div class = "tituloSubContainer">
+                        Traslación
+                    </div>
+                    <div class = "controlGroupA">
+                        <div class="textoA">X</div>
+                        <input id ="boxtrasX" class="paramValue">
+                        <input type="range" id="xrotSlider" name="xtrasSlider" class="paramslider" min="-180" max="180" value="0"/>
+                    </div>
+                    <div class = "controlGroupA">
+                        <div class="textoA">Y</div>
+                        <input id ="boxtrasY" class="paramValue">
+                        <input type="range" id="xrotSlider" name="yTraslider" class="paramslider" min="-180" max="180" value="0"/>
+                    </div>
+                    <div class = "controlGroupA">
+                        <div class="textoA">Z</div>
+                        <input id ="zBotTras" class="paramValue">
+                        <input type="range" id="xrotSlider" name="zTraslider" class="paramslider" min="-180" max="180" value="0"/>
+
                 </div>
-                <div class="caja">
-                    No ha mucho que vivia un hidalgo de los de lanza en astillero..
-                </div>
-                <div class="caja">
-                    ... y ya no continuo con el texto
-                </div>
-                <div class="caja">
-                    Que si, que si, que por mayo...
-                </div>
-                <div class="caja">
-                    Matemáticas
-                </div>
-                <div class="caja">
-                    Física
-                </div>
-                 <div class="caja">
-                    Informática
-                </div>
-                <div class="caja">
-                    Química
-                </div>
-                <div class="caja">
-                    Filosofía
-                </div>
-                 <div class="caja">
-                    Historia
-                </div>
-                <div class="caja">
-                    Biología
-                </div>
-                 <div class="caja">
-                    Dibujo Técnico
-                </div>
+                <div class=" rotateContainer">
+                    <div class = "tituloSubContainer">
+                        ROTACIÓN
+                    </div>
+                    <div class = "controlGroupA">
+                        <div class="textoA">X</div>
+                        <input id ="boxrotX" class="paramValue">
+                        <input type="range" id="xrotSlider" name="xrotSlider" class="paramslider" min="-180" max="180" value="0"/>
+                    </div>
+                    <div class = "controlGroupA">
+                        <div class="textoA">Y</div>
+                        <input id ="boxrotY" class="paramValue">
+                        <input type="range" id="xrotSlider" name="xrotSlider" class="paramslider" min="-180" max="180" value="0"/>
+                    </div>
+                    <div class = "controlGroupA">
+                        <div class="textoA">Z</div>
+                        <input id ="boxrotZ" class="paramValue">
+                        <input type="range" id="xrotSlider" name="xrotSlider" class="paramslider" min="-180" max="180" value="0"/>
+                    </div>
+
+
             </div>
-            <div class="container-caja">
-                <div class="caja">
-                   <input type ="text" id = "textInput"> <button onclick="ejecuta()"> Muestra Texto</button>
-                </div>
-                <div class="caja" id="muestraText">
-                  
-                </div>
-               
-            </div>
-        </diV>
-    </div>
-</body>
+        </div>
+
+         <script src="malaquita.js"></script>
+    </body>
 </html>
