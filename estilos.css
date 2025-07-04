@@ -1,40 +1,62 @@
-.card{
-    border: 2px solid #bbb;
-  
-    border-radius: 14px;
-    max-width: 720px;
-    margin: auto;
-    margin-top: 60px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+#malaquitaSVG{
+    border: 1px solid #272727;
+    margin-left: 40px;
+    background-color: rgb(255, 248, 239);
 }
-/*Comentario de prueba*/
-.card_head{
-    background-color: #ddd;
-    border-top-left-radius: 14px;
-    border-top-right-radius: 14px;
-    height: 40px;
-}
-.card_body{
-    text-align: center;
-    padding: 6px;
-}
-.container-caja{
+
+.malaquitaContainer{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+}
+
+.controlsContainer{
+    box-sizing: border-box;
+    width: 270px;
+    height: 600px;
+    border: solid 1px #000;
+    margin-left: 20px;
+    padding: 12px;
+    background-color: #ddd;
+}
+
+.rotateContainer, .tranlateContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.tituloSubContainer{
+    margin-top: 6px;
+    margin-bottom: 12px;
+    border-bottom: solid 1px #333;
+}
+
+.controlGroupA{
+    display: flex;
+    margin-top: 6px;
+}
+
+.textoA{
+    width: 10px;
+    height: 4px;
 
 }
-.caja{
-    width: 320px;
-    min-height: 40px;
-    padding:2px;
-    border: 2px solid #b16464;
-    border-radius: 14px;
-    background-color: #fdf1f1;
-    color:#b16464;
-    margin-top: 10px;   
-    font-size: 22px;
-    padding-top:4px;
-    margin-top: 16px;
+
+.paramslider{
+    width: 180px;
+    margin-top:4px;
+    margin-left: 20px;
+    appearance: none;
+    display: block;
+    height: 6px;
+     background: #a0a0a0;
+    outline: none;
+     opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.paramValue{
+    width: 25px;
+    height: 12px;
+    margin-left: 10px;
 }
