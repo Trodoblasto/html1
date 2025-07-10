@@ -5,18 +5,22 @@
         <title>Malaquita</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="estilos.css">
-        <script src="nacho.js"></script>
-       
-    
+        <link rel="stylesheet" href="estilos.css"> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.2.4/svg.min.js"></script>  
     </head>
+
     <body>
         <div class="malaquitaContainer">
             <svg width="600" height="600" id ="malaquitaSVG" xmlns="http://www.w3.org/2000/svg">
+                <ellipse  id="miEclipse" rx="200" ry="200" cx="300" cy="300"  style="fill:rgb(241, 241, 241);stroke:rgb(0, 0, 0);stroke-width:1" />
+                 <line x1="100" y1="300" x2="500" y2="300" style="stroke:rgb(116, 116, 116);stroke-width:1" />
+                 <line x1="300" y1="100" x2="300" y2="300" style="stroke:rgb(99, 99, 99);stroke-width:1" />
+                 <line id ="radioVector" x1="300" y1="300" x2="500" y2="300" style="stroke:red;stroke-width:2" />
             </svg>
+
             <div class="controlsContainer">
 
-                <div class=" tranlateContainer">
+                <div class=" translateContainer">
                         <div class = "tituloSubContainer">
                         Traslación
                     </div>
@@ -26,14 +30,14 @@
                         <input type="range" id="xrotSlider" name="xtrasSlider" class="paramslider" min="-180" max="180" value="0"/>
                     </div>
                     <div class = "controlGroupA">
-                        <div class="textoA">Y</div>
+                        <div class="textoA">Giro</div>
                         <input id ="boxtrasY" class="paramValue">
                         <input type="range" id="xrotSlider" name="yTraslider" class="paramslider" min="-180" max="180" value="0"/>
                     </div>
                     <div class = "controlGroupA">
                         <div class="textoA">Z</div>
-                        <input id ="zBotTras" class="paramValue">
-                        <input type="range" id="xrotSlider" name="zTraslider" class="paramslider" min="-180" max="180" value="0"/>
+                        <input id ="anguloR" class="paramValue">
+                        <input type="range" id="anguloRSlider" name="zTraslider" class="paramslider" min="-180" max="180" value="0"/>
 
                 </div>
                 <div class=" rotateContainer">
@@ -55,8 +59,23 @@
                         <input id ="boxrotZ" class="paramValue">
                         <input type="range" id="xrotSlider" name="xrotSlider" class="paramslider" min="-180" max="180" value="0"/>
                     </div>
+            </div>
 
-
+            <div class=" rotateContainer">
+                    <div class = "tituloSubContainer">
+                       Radio Elipse
+                    </div>
+                    <div class = "controlGroupA">
+                        <div class="textoA">X</div>
+                        <input id ="relElipse" class="paramValue">
+                        <input type="range" id="relSlider" name="xrotSlider" class="paramslider" min="0" max="100" value="100" onchangue= "sliderRatioElipse()" />
+                    </div>
+                    <div class = "controlGroupA">
+                        <div class="textoA">Y</div>
+                        <input id ="angulo" class="paramValue">
+                        <input type="range" id="anguloSlider" name="xrotSlider" class="paramslider" min="0" max="720" value="0"/>
+                    </div>
+                    
             </div>
         </div>
 
