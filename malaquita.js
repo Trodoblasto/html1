@@ -54,7 +54,7 @@ function radElipse(angulo, a, b, centroX, centroY){
 
 function colocaExtremo(angulo, ejemayor,  totalEjeMenor){
     //console.log(">> --angulo: " + angulo + "  -- ejemay: " + ejemayor + "  -- ejeMen: " + totalEjeMenor)
-    let coordenadas = longRadElipse(angulo, ejemayor, totalEjeMenor, 300, 300)
+    let coordenadas = radElipse(angulo, ejemayor, totalEjeMenor, 300, 300)
     let radVector = document.getElementById("radioVector")
     radVector.setAttribute("x2", coordenadas[0] )
     radVector.setAttribute("y2", coordenadas[1] )
