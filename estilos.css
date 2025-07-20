@@ -1,21 +1,121 @@
-#malaquitaSVG{
-    border: 1px solid #272727;
-    margin-left: 40px;
-    background-color: rgb(255, 248, 239);
+body{
+    font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+   font-variation-settings:
+    "wdth" 100;
 }
 
 .malaquitaContainer{
+    width: 1500px;
+    border: solid 1px #000;
     display: flex;
+    margin:auto;
+    margin-top:20px;
+}
+
+.svg{
+    border: solid 1px #444444; 
+     margin-top: 10px;
+     margin-left: 10px;
+     margin-bottom: 10px;
+}
+
+.controlesContainer{    
+    box-sizing: border-box;
+    height: 800px;
+    border: solid 1px #000;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.controles{
+    /*display: flex;*/
+    /*direction:column;*/
+}
+
+.representacionCabeza{
+width: 200px;
+ height: 200px;
+ border:solid 1px #444
+}
+
+.tituloSubContainer {
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: solid 1px #000;
+    font-weight: 600;
+}
+
+.translateContainer{
+     width: 540px;
+    margin-top: 20px;
+    margin-left: 16px;
 }
 
 .controlsContainer{
     box-sizing: border-box;
-    width: 270px;
-    height: 600px;
-    border: solid 1px #000;
+    width: 80%;
+    height: 10px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-top: solid 1px #2b2b2b;
+}
+
+.controlGroupA{
+    width: 100%;
+    display: flex;
+    margin-top: 6px;
+}
+
+.textoA{
+    width: 160px;
+    height: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.paramValue{
+    width: 40px;
+    height: 16px;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.paramslider{
+    width: 200px;
+    margin-top:4px;
     margin-left: 20px;
-    padding: 12px;
-    background-color: #ddd;
+    appearance: none;
+    display: block;
+    height: 6px;
+    background: #696969;
+    outline: none;
+     opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.buttonEjecucionSub{
+    margin-top: 14px;
+    cursor: pointer;
+    width: 200px;
+    margin-top: 14px;
+}
+
+.buttonEjecucionSub:hover{
+    background-color: #d1d1d1;
+    cursor: pointer;
+}
+
+.buttonEjecucionSub:active{
+    background-color: #ffa734;
+    cursor: pointer;
 }
 
 .rotateContainer, .tranlateContainer{
@@ -24,39 +124,104 @@
     margin-top: 20px;
 }
 
-.tituloSubContainer{
+.separador{
+    width: 80%;
     margin-top: 6px;
     margin-bottom: 12px;
     border-bottom: solid 1px #333;
 }
 
-.controlGroupA{
-    display: flex;
-    margin-top: 6px;
-}
 
-.textoA{
-    width: 10px;
-    height: 4px;
+.ajust{
+    margin-top: 25px;
 
 }
+.sobreTabContent{
+    margin-left: 0px;
+}
 
-.paramslider{
-    width: 180px;
-    margin-top:4px;
-    margin-left: 20px;
-    appearance: none;
-    display: block;
-    height: 6px;
-     background: #a0a0a0;
+.grupoPestanas{
+    width: 100%;
+    margin-left: 0px !important;
+    border-bottom: #000;
+}
+
+.pestana{
+    background-color: none;
+    border:'solid 1px #444444';
+    color: black;
+    width: 90px;
+    border-bottom: #000;
+}
+
+ .pestana a{
+ outline: none;
+ text-decoration: none;
+ padding: 2px 1px 0;
+ color: black;
+}
+
+.pestana a:link { 
     outline: none;
-     opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
 }
 
-.paramValue{
-    width: 25px;
-    height: 12px;
-    margin-left: 10px;
+.pestana a:visited { 
+    outline: none;
+ text-decoration: none;
+    color: black;
+     font-weight: 600;
 }
+.pestana a:hover { 
+    outline: none;
+   text-decoration: none;
+    color: black;
+     font-weight: 600;
+}
+
+.pestana a:focus { 
+    outline: none;
+    text-decoration: none;
+    color: black;
+     font-weight: 600;
+}
+
+
+/* ---- SLIDER ---------------------------*/
+.slider {
+  appearance: none;
+  width: 80%;
+  -webkit-appearance: none;
+  height: 14px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 14px;
+  background: #353535;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #353535;
+  cursor: pointer;
+}
+
+
+
+

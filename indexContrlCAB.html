@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Malaquita</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="estilos.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <body>
+        <div class="malaquitaContainer">
+            
+            <svg width="800" height="800" id ="malaquitaSVG" xmlns="http://www.w3.org/2000/svg" class= "svg">
+                <!-- CUADRICULA -->
+                <line x1="0" y1="100" x2="1000" y2="100" style="stroke:rgb(201, 201, 201);stroke-width:1" />
+                <line x1="0" y1="200" x2="1000" y2="200" style="stroke:rgb(201, 201, 201);stroke-width:1" />
+                <line x1="0" y1="300" x2="1000" y2="300" style="stroke:rgb(201, 201, 201);stroke-width:1" />
+                <line x1="0" y1="400" x2="1000" y2="400" style="stroke:rgb(201, 201, 201);stroke-width:1" />
+                <line x1="0" y1="500" x2="1000" y2="500" style="stroke:rgb(201, 201, 201);stroke-width:1" />
+                <line x1="0" y1="600" x2="1000" y2="600" style="stroke:rgb(201, 201, 201);stroke-width:1" />
+                <line x1="0" y1="700" x2="1000" y2="700" style="stroke:rgb(201, 201, 201);stroke-width:1" />
+
+                <line x1="100" y1="0" x2="100" y2="1000" style="stroke:rgb(201, 201, 201);stroke-width:1" />
+                <line x1="200" y1="0" x2="200" y2="1000" style="stroke:rgb(201, 201, 201);stroke-width:1" />
+                <line x1="300" y1="0" x2="300" y2="1000" style="stroke:rgb(201, 201, 201);stroke-width:1" />
+                <line x1="400" y1="0" x2="400" y2="1000" style="stroke:rgb(201, 201, 201);stroke-width:1" />
+                <line x1="500" y1="0" x2="500" y2="1000" style="stroke:rgb(201, 201, 201);stroke-width:1" />
+                <line x1="600" y1="0" x2="600" y2="1000" style="stroke:rgb(201, 201, 201);stroke-width:1" />
+                <line x1="700" y1="0" x2="700" y2="1000" style="stroke:rgb(201, 201, 201);stroke-width:1" />
+
+                <circle  id="referencia1" r="5" cx="400" cy="50" fill="red" />
+                <!-- ELIPSES -->
+                <path  id="pathCabeza" d="M 200 200, C 200 125, 300 100, 400 100, C 500 100, 600 125, 600 200C 600 200, 600 400, 600 400, C 600 520, 500 600, 400 600, C 300 600, 200 520, 200 400, C 200 200, 200 200, 200 200Z"  fill= "none" stroke="#000" stroke-width="10" />
+            </svg>
+
+            <div class = "controlesContainer"> 
+                <div class = "controles">                        
+                    <div class=" translateContainer">
+                            <div class = "tituloSubContainer">
+                            Traslación
+                        </div>
+                        <div class = "controlGroupA">
+                            <div class="textoA">Rot X</div>
+                            <input id ="rotXText" class="paramValue">
+                            <input type="range" id="rotXSlider"  class="paramslider slider" min="0" max="720" value="0"/>
+                        </div>
+                        <div class = "controlGroupA">
+                            <div class="textoA">Rot Y</div>
+                            <input id ="rotYText" class="paramValue">
+                            <input type="range" id="rotYSlider"  class="paramslider slider" min="0" max="720" value="0"/>
+                        </div>
+                        <div class = "controlGroupA">
+                            <div class="textoA">Rot Z</div>
+                            <input id ="rotZText" class="paramValue">
+                            <input type="range" id="rotZSlider"  class="paramslider slider" min="0" max="720" value="0"/>
+                        </div>
+                    </div>
+                </div>    
+               
+                <div class="controles">        
+                        <div class = "container ajust">
+                                <ul class="nav nav-tabs grupoPestanas">
+                                    <li class="active pestana"><a data-toggle="tab" href="#home">Cabeza</a></li>
+                                    <li class="pestana"><a data-toggle="tab" href="#menu1">Ojos</a></li>
+                                    <li class="pestana"><a data-toggle="tab" href="#menu2">Nariz</a></li>
+                                    <li class="pestana"><a data-toggle="tab" href="#menu3">Orejas</a></li>
+                                </ul>
+                                <div class="tab-content sobreTabContent" >  
+                                    <div id="home" class="tab-pane fade in active" >
+                                            <div class=" translateContainer" >                                              
+                                                <div class = "controlGroupA">
+                                                    <div class="textoA">Anchura F. (10-20)</div>
+                                                    <input id ="anchuraCabTEX"  class="paramValue" disabled />                               
+                                                    <input type="range" id="anchuraCabSlider" class="paramslider slider" min="10" max="20" />
+                                                </div>
+                                                <div class = "controlGroupA">
+                                                    <div class="textoA">Altura (10-25)</div>
+                                                    <input id ="alturaTEX" class="paramValue" disabled />
+                                                    <input type="range" id="alturaSlider" class="paramslider slider" min="10" max="25" />
+                                                </div>
+                                                <div class = "controlGroupA">
+                                                    <div class="textoA">Craneo (5-20)</div>
+                                                    <input id ="craneoTEX" class="paramValue" disabled  />
+                                                    <input type="range" id="craneoSlider"  class="paramslider slider" min="5" max="20" />
+                                                </div>
+                                                <div class = "controlGroupA">
+                                                    <div class="textoA">AnchBar (0.8-2.0)</div>
+                                                    <input id ="anchuraBarTEX" class="paramValue" disabled  />
+                                                    <input type="range" id="anchuraBarSlider" class="paramslider slider" min="0.8" max="1.2"  step="0.1" value = "1"/>
+                                                </div>
+                                                <div class = "controlGroupA">
+                                                    <div class="textoA">Barbilla (10-30)</div>
+                                                    <input id ="barbillaTEX" class="paramValue" disabled />
+                                                    <input type="range" id="barbillaSlider" class="paramslider slider" min="10" max="40" value = "20"/>
+                                                </div>
+                                                <div class = "controlGroupA">
+                                                    <div class="textoA">CurvaBar (3 - 10)</div>
+                                                    <input id ="curvaBarTEX" class="paramValue" disabled />
+                                                    <input type="range" id="curvaBarSlider" class="paramslider slider" min="3" max="10" />
+                                                </div>
+                                                <div class = "controlGroupA">
+                                                    <div class="textoA">SuperCuad (5 - 9)</div>
+                                                    <input id ="superCuadraturaTEX" class="paramValue" disabled />
+                                                    <input type="range" id="superCuadraturaSlider" class="paramslider slider" min="2" max="9" />
+                                                </div>
+                                                <div class = "buttonEjecucionSub">
+                                                    <button id ="dibujaCabezaBUTTON"   class="buttonEjecucionSub" >Crear Cabeza</button>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div id="menu1" class="tab-pane fade">
+                                        <div class=" translateContainer" >                                              
+                                                    <div class = "controlGroupA">
+                                                        <div class="textoA"> Distancia (10-20)</div>
+                                                        <input id ="distOjosEX"  class="paramValue" disabled />                               
+                                                        <input type="range" id="distOjosSlider" class="paramslider slider" min="10" max="20" />
+                                                    </div>
+                                                    <div class = "controlGroupA">
+                                                        <div class="textoA">Altura (10-25)</div>
+                                                        <input id ="alturaOjosTEX" class="paramValue" disabled />
+                                                        <input type="range" id="alturaOjosSlider" class="paramslider slider" min="10" max="25" />
+                                                    </div>
+                                                    <div class = "controlGroupA">
+                                                        <div class="textoA">Tamaño (5-20)</div>
+                                                        <input id ="tamOjosTEX" class="paramValue" disabled  />
+                                                        <input type="range" id="tamOjosSlider"  class="paramslider slider" min="5" max="20" />
+                                                    </div>
+                                                    <div class = "buttonEjecucionSub">
+                                                        <button id ="dibujaCabezaBUTTON"   class="buttonEjecucionSub" >Crear Cabeza</button>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    <div id="menu2" class="tab-pane fade">
+                                        <div class=" translateContainer" >                                              
+                                                    <div class = "controlGroupA">
+                                                        <div class="textoA"> Altura (%)</div>
+                                                        <input id ="alturaNasoEX"  class="paramValue" disabled />                               
+                                                        <input type="range" id="alturaNasoSlider" class="paramslider slider" min="30" max="100" />
+                                                    </div>
+                                                    <div class = "controlGroupA">
+                                                        <div class="textoA">Altura (10-25)</div>
+                                                        <input id ="alturaOjosTEX" class="paramValue" disabled />
+                                                        <input type="range" id="alturaOjosSlider" class="paramslider slider" min="10" max="25" />
+                                                    </div>
+                                                    <div class = "controlGroupA">
+                                                        <div class="textoA">Tamaño (5-20)</div>
+                                                        <input id ="tamOjosTEX" class="paramValue" disabled  />
+                                                        <input type="range" id="tamOjosSlider"  class="paramslider slider" min="5" max="20" />
+                                                    </div>
+                                                    <div class = "buttonEjecucionSub">
+                                                        <button id ="dibujaCabezaBUTTON"   class="buttonEjecucionSub" >Crear Cabeza</button>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div id="menu3" class="tab-pane fade">
+                                        
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                
+            </div>
+        </div>
+        
+         <script src="controlesCreacion.js"></script>
+        </body>
+    </body>
+</html>
